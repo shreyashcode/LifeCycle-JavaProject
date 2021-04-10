@@ -1,0 +1,4 @@
+Schema ->   food_item
+
+Col1
+Name          Qty 100gm	Calorie Value	

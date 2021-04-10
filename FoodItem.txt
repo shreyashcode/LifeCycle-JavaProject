@@ -1,0 +1,78 @@
+Roti 		1	110
+Rice 		1	140
+Aloo_Paratha     	1	180
+Paratha 		1	130          
+Ragi	                  100	320.7
+Vegetable samosa      1                260
+Daal Indian Meal          100 gm     90
+Palak Paneer               100 gm     170
+Mango 		 1	100
+Apple	                   1	90 
+Banana		 1	110
+Pineapple   	 1	452
+Custard apple	 100	98.9
+Carrot Halwa	 100 gms	320
+Jalebi	                   1000gms	500
+Kheer	                   100 gms	180
+Rasgulla		100 gms 	280
+Curry (Chicken)	100 gms	225
+Curry (Veg.)	100 gms	130
+Fried Fish	100 gms	160
+Pulav (Veg.)	100 gms	130
+
+
+
+Running	1 	16
+Walking 	1	4.2
+Aerobic_dance 	1	9.8
+Jumping_jacks	1	8
+Bicycling		1	10
+Swimming 	1	9
+Pushups 		1	7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Roti 		1	110
+Rice 		1	140
+Aloo_Paratha     	1	180
+Paratha 		1	130
+Ragi	100	320.7
+Vegetable_samosa      1                260
+Daal_Indian_Meal          100     90
+Palak_Paneer               100     170
+Mango 		 1	100
+Apple	                   1	90
+Banana		 1	110
+Pineapple   	 1	452
+Custard_apple	 100	98.9
+Carrot_Halwa	 100	320
+Jalebi	                   100	500
+Kheer	                   100	180
+Rasgulla		100 	280
+Chicken_Curry	100	225
+Veg_Curry 	100	130
+Fried_Fish	    100	160
+Veg_Pulav	   100	130
+
+
+
+
