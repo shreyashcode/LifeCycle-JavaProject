@@ -6,11 +6,13 @@ import java.util.Comparator;
 import java.util.Scanner;
 
 public class Demo {
-    public static Connection connection = null;
-    public static Statement statement = null;
-    public static ResultSet resultSet = null;
-
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
+        for(int i = 0; i <= 6; i++){
+            String name = sc.next();
+            int time = sc.nextInt();
+            double cal = sc.nextDouble();
+            System.out.println("('" + name + "', " + time + ", "+cal+")");
+        }
     }
 }

@@ -26,13 +26,13 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="6deedb59-5ca9-433e-bd58-8b3508d58f36">
-        <schema name="food_items" object-types="table, function, column, view" />
+        <schema name="food_items" object-types="table, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="6deedb59-5ca9-433e-bd58-8b3508d58f36">
-      <console name="FoodItems" type="STANDARD" schema="food_items" session="Main"><![CDATA[select * from workouts]]></console>
+      <console name="FoodItems" type="STANDARD" schema="food_items" session="Main"><![CDATA[select * from fooditems]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

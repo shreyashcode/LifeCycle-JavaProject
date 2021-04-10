@@ -10,19 +10,41 @@ public class MainClass {
     public static Statement statement = null;
     public static ResultSet resultSet = null;
     public static void main(String[] args) {
-        showFood(getFoodItems(100.0));
-        System.out.println();
-        showFood(getFoodItems(200.0));
-        System.out.println();
+
+
+
     }
 
-    public static void showFood(ArrayList<FoodItem> foodItems) {
-        for(FoodItem foodItem: foodItems) {
-            System.out.println(foodItem);
+    public static ArrayList<Workouts> getExercises(double CalValue){
+
+        ArrayList<Workouts> workouts = new ArrayList<>();
+        try {
+            setupDB();
+            String query = "select * from workouts";
+            resultSet = statement.executeQuery(query);
+            while(resultSet.next()){
+                String name = resultSet.getString(1);
+                int time = resultSet.getInt(2);
+                double cal = resultSet.getDouble(3);
+                int count = 1;
+                while (count*cal < CalValue){
+                    count++;
+                }
+                workouts.add(new Workouts(name, count, cal*count));
+            }
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
+        return workouts;
+    }
+
+    public static <T> void show(ArrayList<T> arrayList) {
+        for(T k: arrayList) {
+            System.out.println(k);
         }
     }
 
-    public static ArrayList<FoodItem> getFoodItems(Double CalValue){
+    public static ArrayList<FoodItem> getFoodItems(double CalValue){
         ArrayList<FoodItem> foodItems = new ArrayList<>();
         try {
             setupDB();

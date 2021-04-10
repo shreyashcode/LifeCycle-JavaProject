@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class FoodItem implements Comparable<FoodItem> {
     protected String name;
     protected int Qty;
@@ -25,7 +27,14 @@ public class FoodItem implements Comparable<FoodItem> {
 
     @Override
     public String toString() {
-        return "Name: " + this.getName() + "\t Qty: " + this.getQty() + "\t Calories: " + this.getCalorieValue();
+        DecimalFormat df = new DecimalFormat("###.###");
+        String emp;
+        if(this.getQty() == 1){
+            emp = " ";
+        } else {
+            emp = " grams of ";
+        }
+        return "Eat " + this.getQty() + emp + this.getName() + " to get " + df.format(this.getCalorieValue()) + " calories!";
     }
 
     public void setQty(int qty) {
