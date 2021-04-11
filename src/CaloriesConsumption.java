@@ -75,36 +75,3 @@ public class CaloriesConsumption {
         return CaloriesConsumed;
     }
 }
-class Trial{
-    public static void main(String[] args) {
-        double Calories = CaloriesConsumption.getCaloriesConsumed();
-        System.out.println(Calories);
-        double reqCals = 4000.0;
-
-        if(Math.abs(reqCals-Calories) <= 100){
-            System.out.println("Hurry! Enjoy your day..............");
-        } else if(Calories < reqCals){
-            System.out.println("You lack in calories. Try eating these food items to reach your GOAL.......");
-            show(MainClass.getFoodItems(reqCals-Calories), false);
-        } else {
-            System.out.println("You have exceeded the calories count. Try out these exercise to reach your GOAL.......");
-            show(MainClass.getExercises(Calories-reqCals), true);
-        }
-    }
-
-    public static <T> void show(ArrayList<T> arrayList, boolean flag) {
-        boolean first = false;
-        for(T k: arrayList) {
-            if(flag && first){
-                System.out.println("\t\t---------OR---------");
-            }
-            first = true;
-            System.out.println(k);
-            try {
-                Thread.sleep(1000);
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-            }
-        }
-    }
-}

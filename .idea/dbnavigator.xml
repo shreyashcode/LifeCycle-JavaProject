@@ -26,13 +26,14 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="6deedb59-5ca9-433e-bd58-8b3508d58f36">
-        <schema name="food_items" object-types="table, view" />
+        <schema name="common" object-types="function, table, procedure, view" />
+        <schema name="food_items" object-types="constraint, function, column, table, procedure, index, dataset trigger, view" />
       </connection>
     </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="6deedb59-5ca9-433e-bd58-8b3508d58f36">
-      <console name="FoodItems" type="STANDARD" schema="food_items" session="Main"><![CDATA[select * from fooditems]]></console>
+      <console name="FoodItems" type="STANDARD" schema="food_items" session="Main"><![CDATA[select * from management]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -40,6 +41,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="6deedb59-5ca9-433e-bd58-8b3508d58f36" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="6deedb59-5ca9-433e-bd58-8b3508d58f36" dataset="food_items.management" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

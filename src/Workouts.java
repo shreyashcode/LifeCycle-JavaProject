@@ -14,6 +14,11 @@ public class Workouts {
     @Override
     public String toString() {
         DecimalFormat df = new DecimalFormat("###.###");
+        int hr = time/60;
+        int min = time%60;
+        if(hr != 0){
+            return "Do " + name + " for "+ hr + " Hrs, " + min +" minutes and burn " + df.format(this.Calories) + " calories!";
+        }
         return "Do " + name + " for "+ time +" minutes and burn " + df.format(this.Calories) + " calories!";
     }
 
