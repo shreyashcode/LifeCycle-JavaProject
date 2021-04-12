@@ -9,10 +9,8 @@ public class User {
     private boolean gender;
     private boolean target;
 
-
     public User(){
     }
-
 
     public User(String name, String username, String password) {
         this.name = name;
@@ -29,15 +27,16 @@ public class User {
             //male
             cals = 24 * 0.1 * weight * 1.3 * 10;
         }
+
         if(target){
+            // Weight gain
             cals += 500.0;
         } else {
+            // Weight loss
             cals = Math.max(0, cals-500.0);
         }
         return cals;
     }
-
-
     //getters
     public String getName() {
         return name;

@@ -5,8 +5,12 @@ import java.util.ArrayList;
 
 public class Trial{
     public static void trial(){
+
+        // Shikhar's part
         double Calories = CaloriesConsumption.getCaloriesConsumed();
         System.out.println(Calories);
+
+        // Suraj's part
         double reqCals = CurrentUser.user.calculateMaintanenceCalories();
 
         System.out.println("ReqCals: " + reqCals);
@@ -23,9 +27,11 @@ public class Trial{
             System.out.println("Hurry! Enjoy your day..............");
         } else if(Calories < reqCals){
             System.out.println("You lack in calories. Try eating these food items to reach your GOAL.......");
+
             show(MainClass.getFoodItems(reqCals-Calories), false);
         } else {
             System.out.println("You have exceeded the calories count. Try out these exercise to reach your GOAL.......");
+
             show(MainClass.getExercises(Calories-reqCals), true);
         }
     }

@@ -53,20 +53,17 @@ public class Registration {
 
         CurrentUser.user = currentUser;
 
-        double maintainenceCalories = currentUser.calculateMaintanenceCalories();
+        double maintenanceCalories = currentUser.calculateMaintanenceCalories();
 
         //register the user into the database ( login table as well as management table )
         String uLoginQuery = "insert into login values(" + "'"+username + "'" + ","+ "'"+ password +"'"+ ")";
-        System.out.println(uLoginQuery);
         Connection con = Database.initDb();
         Statement st = con.createStatement();
         // login query
         st.executeUpdate(uLoginQuery);
 
         //management query
-
-        String uManagementQuery = "insert into management values("+ "'" +username + "'" + "," + "'" + name + "'" + "," + height + "," + weight + "," + gender + "," + maintainenceCalories + "," + target +")";
-        System.out.println(uManagementQuery);
+        String uManagementQuery = "insert into management values("+ "'" +username + "'" + "," + "'" + name + "'" + "," + height + "," + weight + "," + gender + "," + maintenanceCalories + "," + target +")";
         st.executeUpdate(uManagementQuery);
 
         System.out.println("Registration Succesfull");
@@ -74,7 +71,7 @@ public class Registration {
     }
 
     private static void login() throws SQLException, ClassNotFoundException {
-        System.out.println("Enter Username");
+        System.out.println("Enter Phone number as Username.....");
         String username = sc.next();
         System.out.println("Enter Password");
         String password = sc.next();
@@ -84,12 +81,13 @@ public class Registration {
 
         String query  = "select * from management where username = "+ "'"+ username +"'";
         ResultSet resultSet = statement.executeQuery(query);
-        if(!resultSet.next()){
-            System.out.println("User not found! Credentials invalid.........");
-            login();
-            return;
-        }
+//        if(!resultSet.next()){
+//            System.out.println("User not found! Credentials invalid.........");
+//            login();
+//            return;
+//        }
         CurrentUser.user = new User();
+        resultSet.next();
         CurrentUser.user.setGender(resultSet.getBoolean(5));
         CurrentUser.user.setUsername(username);
         CurrentUser.user.setWeight(resultSet.getDouble(4));

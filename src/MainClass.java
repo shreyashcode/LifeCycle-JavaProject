@@ -9,11 +9,6 @@ public class MainClass {
     public static Connection connection = null;
     public static Statement statement = null;
     public static ResultSet resultSet = null;
-    public static void main(String[] args) {
-
-
-
-    }
 
     public static ArrayList<Workouts> getExercises(double CalValue){
 
